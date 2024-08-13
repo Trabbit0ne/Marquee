@@ -1,0 +1,55 @@
+#!/bin/bash
+
+# Developed By TrabbitOne • PENTAGONE GROUP
+# 2024 • Aug.13 4:08
+
+# Function to stop the banner and clean up
+stop_marquee() {
+    kill $BANNER_PID 2>/dev/null
+    tput cnorm  # Ensure cursor is visible
+    # Clear the banner line
+    tput cup 0 0
+    echo -ne "\033[K"
+}
+
+# Function to display the scrolling text
+marquee() {
+    local text="$1"
+    local delay="${2:-0.2}"  # Default delay d
+    local length="${#text}"
+    local pos=0
+
+    # Function to scroll the text in the backd
+    scroll_text() {
+        while true; do
+            # Save the current cursor position
+            tput sc
+
+            # Move cursor to the top of the t)
+            tput cup 0 0
+
+            # Print the banner text and cleare
+            echo -ne "${text:pos:length} ${te"
+
+            # Restore the saved cursor positin
+            tput rc
+
+            # Increment position
+            ((pos=(pos + 1) % length))
+
+            # Delay between frames
+            sleep "$delay"
+        done
+    }
+
+    # Start the scrolling text in the backgrod
+    scroll_text &
+
+    # Save the process ID of the scrolling tet
+    BANNER_PID=$!
+
+    # Move cursor to the line below the bannet
+    tput cup 1 0
+    tput cnorm  # Ensure cursor is visible
+    echo
+}
