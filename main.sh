@@ -16,10 +16,10 @@ tput cup 1 0
 
 # Display the version line
 echo
-echo -e "〉[ Version: 1.0 ]"
+echo -e "[ Version: 1.0 ]"
 
 # Prompt for user input on the line below the version line
-echo -e " 〉(Mrqe)-[P-G]> \c"  # Move to the same line as the prompt
+echo -e "[ Marquee - TrabbitOne ]=> \c"  # Move to the same line as the prompt
 read user_input
 
 # Ensure output appears on a new line
