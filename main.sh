@@ -6,7 +6,7 @@
 source marquee
 
 # Start the banner with your message
-marquee "Developed By TrabbitOne • PENTAGONE GROUP"
+marquee "Developed By TrabbitOne • PENTAGONE GROUP || "
 
 # clear the terminal screen
 clear
