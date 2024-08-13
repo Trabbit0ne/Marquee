@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Mrqe • Example #1
+# Marquee • Example #1
 
 # import the marquee tool
 source marquee
