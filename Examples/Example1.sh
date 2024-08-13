@@ -3,7 +3,7 @@
 # Mrqe • Example #1
 
 # import the marquee tool
-source marquee
+source Marquee
 
 # Start the banner with your message
 marquee "Developed By TrabbitOne • PENTAGONE "
