@@ -5,7 +5,7 @@ Tool that make HTML Marquee looking banners into your bash/shell scripts.
 
 ## Installation & Usage
 ```
-git clone https://github.com/Trabbit0ne/Marquee.git && cd Marquee && chmod +x * && ./Examples/Example1.sh
+git clone https://github.com/Trabbit0ne/Marquee.git && cd Marquee && chmod +x * && chmod +x Examples/* && ./Examples/Example1.sh
 ```
 
 Usage:
